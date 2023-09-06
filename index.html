@@ -24,35 +24,31 @@
       <img id="logo" src="assets/images/logo.png" alt="three-hands" />
     </h1>
 
-    <div class="game-area">
+    <div id="game-area">
       <button id="rock" aria-label="rock" data-type="0">
-        Rock
         <img src="assets/images/rock.jpg" alt="rock" />
       </button>
       <button id="paper" aria-label="paper" data-type="1">
-        Paper
         <img src="assets/images/paper.jpg" alt="paper" />
       </button>
       <button id="scissors" aria-label="scissors" data-type="2">
-        Scissors
         <img src="assets/images/scissors.jpg" alt="scissors" />
       </button>
     </div>
-    <div>
-      <div id="player-choice"></div>
-      <div id="computer-choice"></div>
+
+    <div id="answers">
+      <p id="your-choice">
+        <span><img src="assets/images/win-lose.jpg" alt="rules" /></span>
+      </p>
+      <p id="computer-choice">
+        <span><img src="assets/images/win-lose.jpg" alt="rules" /></span>
+      </p>
+      <p id="text">Who won?!</p>
     </div>
 
-    <div class="answers">
-      Answers
-      <p id="your-choice">You chose scissors</p>
-      <p id="computer-choice">Compuer chose rock</p>
-      <p>Who won!</p>
-    </div>
-
-    <div class="score-area">
-      <p>Your Answer</p>
-      <p>Computer Answer</p>
+    <div id="score-area">
+      <p class="scores">Your Points <span id="your-points">0</span></p>
+      <p class="scores">Computer Points <span id="computer-points">0</span></p>
     </div>
 
     <script src="assets/js/script.js"></script>

@@ -1,9 +1,48 @@
+body {
+    background: rgb(243, 116, 159);
+}
+
 #heading {
+    text-decoration: underline;
     text-align: center;
     font-weight: 900;
 }
 
-.game-area {
-    margin-left: 10%;
+#game-area {
+    text-align: center;
+    margin-top: 5%;
     margin-bottom: 5%;
+}
+
+#answers {
+    clear: both;
+    display: inline;
+    margin-bottom: 10%;
+}
+
+#your-choice {
+    display: inline;
+    margin-left: 20%;
+}
+
+#computer-choice {
+    display: inline;
+}
+
+#text {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: x-large;
+    font-weight: 800;
+}
+
+#score-area {
+    text-align: center;
+}
+
+.scores {
+    display: inline;
+    padding: 30px;
+    font-weight: 500;
 }
