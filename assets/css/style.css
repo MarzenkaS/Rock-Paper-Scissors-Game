@@ -18,11 +18,11 @@ body {
     clear: both;
     display: inline;
     margin-bottom: 10%;
+    margin-left: 20%;
 }
 
 #your-choice {
     display: inline;
-    margin-left: 20%;
 }
 
 #computer-choice {
@@ -45,4 +45,19 @@ body {
     display: inline;
     padding: 30px;
     font-weight: 500;
+
+}
+
+/* media queries */
+
+@media screen and (max-width: 400px) {
+
+    #answers {
+        float-left;
+        margin-left: 0;
+    }
+
+    #answers img {
+        width: 100%;
+    }
 }
