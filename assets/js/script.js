@@ -48,4 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
         };
 
-        
+        //Computer choice image references
+        let computerChoiceImageRef = document.getElementById('computer-choice');
+
+        function computerChoice(choice) {
+            let choice = document.getElementById("button");
+            choice = [rock, paper, scissors];
+            let random = Math.floor(Math.random() * 3); // random number between 0 and 2
+            return choice[random];
+            computerChoice(choice);
+        };
+
+       
