@@ -45,7 +45,6 @@ body {
     display: inline;
     padding: 30px;
     font-weight: 500;
-
 }
 
 /* media queries */
@@ -54,10 +53,10 @@ body {
 
     #game-area {
         text-align: center;
+
     }
 
     #answers {
-        float-left;
         margin-left: 0;
     }
 

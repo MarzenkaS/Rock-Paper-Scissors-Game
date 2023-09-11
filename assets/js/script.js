@@ -1,50 +1,24 @@
-// button references
-const rockBtnRef = document.getElementById('rock');
-const paperBtnRef = document.getElementById('paper');
-const scissorsBtnRef = document.getElementById('scissors');
+// Wait for the DOM to finish loading before running the game
+// Get the button elements
 
-//Player choice image references
-const playerChoiceImageRef = document.getElementById('player-choice');
+document.addEventListener("DOMContentLoaded", function () {
+    let buttons = document.getElementById("button");
+    for (let button of buttons) {
+        button.addEventListener("click", function () {
+        });
 
+        // Add event listeners to the buttons
+        rockBtnRef.addEventListener('click', ("rock")); {
+            console.log('Rock button clicked');
+            yourChoice(rock);
+        };
+        paperBtnRef.addEventListener('click', ("paper")); {
+            console.log('Paper button clicked');
+            yourChoice(paper);
+        };
+        scissorsBtnRef.addEventListener('click', ("scissors")); {
+            console.log('Scissors button clicked');
+            yourChoice(scissors);
+        };
 
-// Add event listeners to the buttons
-rockBtnRef.addEventListener('click', (rock) => {
-    console.log('Rock button clicked');
-    PlayerChoice(rock);
-});
-paperBtnRef.addEventListener('click', (paper) => {
-    console.log('Paper button clicked');
-});
-scissorsBtnRef.addEventListener('click', (scissors) => {
-    console.log('Scissors button clicked');
-});
-
-
-
-
-
-function PlayerChoice(choice) {
-    let playerChoiceImage = document.createElement("img");
-    switch (choice) {
-        case rock:
-            playerChoiceImage.src = "http://www.google.com/rock.png";
-            break;
-        case scissors:
-            playerChoiceImage.src = "http://www.google.com/scissors.png";
-            break;
-        case paper:
-            playerChoiceImage.src = "http://www.google.com/paper.png";
-            break;
-        default:
-        // code block
-    }
-    playerChoiceImageRef.appendChild(playerChoiceImage);
-
-};
-
-function ComputerChoice() {
-    const Choices = [rock, paper, scissors];
-    // random number between 0 and 2
-    let random = Math.floor(Math.random() * 3);
-    return Choices[random];
-}
+        
