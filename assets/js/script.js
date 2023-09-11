@@ -21,4 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
             yourChoice(scissors);
         };
 
+        // Button references
+        const rockBtnRef = document.getElementById('rock');
+        const paperBtnRef = document.getElementById('paper');
+        const scissorsBtnRef = document.getElementById('scissors');
+
         
