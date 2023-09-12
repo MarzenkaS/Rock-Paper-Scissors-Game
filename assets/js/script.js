@@ -28,35 +28,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
         //Your choice image references
         let yourChoiceImageRef = document.getElementById('your-choice');
-
-        function yourChoice(choice) {
+        yourChoice = () => {
             let yourChoiceImage = document.createElement("img");
-            switch (choice) {
-                case rock:
-                    yourChoiceImage.src = "assets/images/rock.jpg";
-                    break;
-                case scissors:
-                    yourChoiceImage.src = "assets/images/scissors.jpg";
-                    break;
-                case paper:
-                    yourChoiceImage.src = "assets/images/paper.jpg";
-                    break;
-                default:
-                    console.log(choice);
-            }
+            if (yourChoiceImage === 'rock' || yourChoiceImage === 'paper' || yourChoiceImage === 'scissors') {
+                return yourChoiceImage;
+            };
             yourChoiceImageRef.appendChild(yourChoiceImage);
-
         };
 
         //Computer choice image references
-        let computerChoiceImageRef = document.getElementById('computer-choice');
-
-        function computerChoice(choice) {
-            let choice = document.getElementById("button");
-            choice = [rock, paper, scissors];
-            let random = Math.floor(Math.random() * 3); // random number between 0 and 2
-            return choice[random];
-            computerChoice(choice);
+        computerChoiceImageRef = document.getElementById('computer-choice');
+        computerChoice = () => {
+            const choice = document.getElementById("button");
+            choice === ('rock' || 'paper' || 'scissors');
+            const randomNumber = Math.floor(Math.random() * 3); // random number between 0 and 2
+            switch (randomNumber) {
+                case 0:
+                    return 'rock';
+                case 1:
+                    return 'paper';
+                case 2:
+                    return 'scissors';
+            }
         };
+        // Determine the winner
 
-       
+        determineWinner = (yourChoice, computerChoice) => {
+            if (yourChoice === computerChoice) {
+                return 'The game is a tie';
+            }
+            if (yourChoice === 'rock') {
+                if (computerChoice === 'paper') {
+                    return 'The computer won!';
+                } else {
+                    return 'Congratulation, you won!';
+                }
+            }
+            if (yourChoice === 'paper') {
+                if (computerChoice === 'scissors') {
+                    return 'The computer won!';
+                } else {
+                    return 'Congratulations you won!';
+                }
+            }
+            if (userChoice === 'scissors') {
+                if (computerChoice === 'rock') {
+                    return 'The computer won!';
+                } else {
+                    return 'Congratulations you won!';
+                }
+            }
+        };
