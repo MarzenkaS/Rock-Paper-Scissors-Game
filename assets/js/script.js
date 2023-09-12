@@ -2,51 +2,47 @@
 // Get the button elements
 
 document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementById("button");
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            let yourChoice = this.getAttribute("data-type");
-            if (this.getAttribute("data-type") === "click") {
-                runGame();
-            };
-            runGame(yourChoice);
-        });
+    let button = document.getElementById("button");
+    let yourChoice = document.getElemetnById("your-choice");
+    let computerChoice = document.getElementByIde("computer-choice");
+    button.addEventListener("click", function () {
+        yourChoice = this.getAttribute("data-type");
+    });
+    if (this.getAttribute("data-type") === "click") {
+        runGame(yourChoice);
     }
 
     // Add event listeners to the buttons
+    let rockBtnRef = document.getElementById('rock');
+    let paperBtnRef = document.getElementById('paper');
+    let scissorsBtnRef = document.getElementById('scissors');
     rockBtnRef.addEventListener('click', ("rock")); {
         console.log('Rock button clicked');
-        yourChoice(rock);
+        yourChoice('rock');
     }
     paperBtnRef.addEventListener('click', ("paper")); {
         console.log('Paper button clicked');
-        yourChoice(paper);
+        yourChoice('paper');
     }
     scissorsBtnRef.addEventListener('click', ("scissors")); {
         console.log('Scissors button clicked');
-        yourChoice(scissors);
+        yourChoice('scissors');
     }
 
-    // Button references
-    const rockBtnRef = document.getElementById('rock');
-    const paperBtnRef = document.getElementById('paper');
-    const scissorsBtnRef = document.getElementById('scissors');
-
     //Your choice image references
-    yourChoiceImageRef = document.getElementById('your-choice');
+    yourChoiceImageRef = document.getElementById('your-choice').getAttribute("src");
     yourChoice = () => {
         let yourChoiceImage = document.createElement("img");
         if (yourChoiceImage === 'rock' || yourChoiceImage === 'paper' || yourChoiceImage === 'scissors') {
             return yourChoiceImage;
-        };
+        }
         yourChoiceImageRef.appendChild(yourChoiceImage);
     };
 
     //Computer choice image references
-    computerChoiceImageRef = document.getElementById('computer-choice');
+    computerChoiceImageRef = document.getElementById('computer-choice').getAttribute("src");
     computerChoice = () => {
-        const choice = document.getElementById("button");
-        choice === ('rock' || 'paper' || 'scissors');
+        computerChoiceImage = (computerChoiceImage === 'rock' || computerChoiceImage === 'paper' || computerChoiceImage === 'scissors');
         const randomNumber = Math.floor(Math.random() * 3); // random number between 0 and 2
         switch (randomNumber) {
             case 0:
@@ -77,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return 'Congratulations you won!';
             }
         }
-        if (userChoice === 'scissors') {
+        if (yourChoice === 'scissors') {
             if (computerChoice === 'rock') {
                 return 'The computer won!';
             } else {
@@ -99,5 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(yourChoice);
     console.log(computerChoice);
-    runGame(yourChoice);
-
+    console.log(determinewinner(yourChoice, computerChoice));
+    runGame();
