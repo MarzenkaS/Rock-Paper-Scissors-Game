@@ -18,6 +18,7 @@ body {
     clear: both;
     display: inline;
     margin-bottom: 10%;
+    text-align: center;
     margin-left: 20%;
 }
 
@@ -53,7 +54,6 @@ body {
 
     #game-area {
         text-align: center;
-
     }
 
     #answers {

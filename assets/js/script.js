@@ -1,61 +1,105 @@
+const choiceBtnRef = document.getElementsByClassName("choices-btn");
+const yourChoiceBoxRef = document.getElementById("your-choice-image");
+const computerChoiceBoxRef = document.getElementById("computer-choice-image");
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements
 
 document.addEventListener("DOMContentLoaded", function () {
-    let button = document.getElementById("button");
-    let yourChoice = document.getElemetnById("your-choice");
-    let computerChoice = document.getElementByIde("computer-choice");
-    button.addEventListener("click", function () {
-        yourChoice = this.getAttribute("data-type");
-    });
-    if (this.getAttribute("data-type") === "click") {
-        runGame(yourChoice);
-    }
+    console.log('choiceBtnRef', choiceBtnRef);
+    let yourChoice = document.getElementById("your-choice");
+    let computerChoice = document.getElementById("computer-choice");
+    for (let button of choiceBtnRef) {
+        button.addEventListener("click", function () {
+            console.log('button', button);
+            yourChoice = this.getAttribute("data-type");
+            if (yourChoice === "0") {
+                console.log('Worked');
+                console.log('yourChoiceBoxRef', yourChoiceBoxRef.src);
+                yourChoiceBoxRef.src = 'assets/images/rock.jpg';
+            } else if (yourChoice === "1") {
+                console.log('yourChoiceBoxRef', yourChoiceBoxRef.src);
+                yourChoiceBoxRef.src = 'assets/images/paper.jpg';
+            } else if (yourChoice === "2") {
+                console.log('yourChoiceBoxRef', yourChoiceBoxRef.src);
+                yourChoiceBoxRef.src = 'assets/images/scissors.jpg';
+            }
+            /*
+            switch (yourChoice) {
+                case 0:
+                    yourChoiceBoxRef.setAttribute.src('assets/images/rock.jpg');
+                    break;
+                case 1:
+                    yourChoiceBoxRef.setAttribute.src('assets/images/paper.jpg');
+                    break;
+                case 2:
+                    yourChoiceBoxRef.setAttribute.src('assets/images/scissors.jpg');
+                    break;
+            }
+             */
 
-    // Add event listeners to the buttons
-    let rockBtnRef = document.getElementById('rock');
-    let paperBtnRef = document.getElementById('paper');
-    let scissorsBtnRef = document.getElementById('scissors');
-    rockBtnRef.addEventListener('click', ("rock")); {
-        console.log('Rock button clicked');
-        yourChoice('rock');
+        });
     }
-    paperBtnRef.addEventListener('click', ("paper")); {
-        console.log('Paper button clicked');
-        yourChoice('paper');
-    }
-    scissorsBtnRef.addEventListener('click', ("scissors")); {
-        console.log('Scissors button clicked');
-        yourChoice('scissors');
-    }
-
     //Your choice image references
-    yourChoiceImageRef = document.getElementById('your-choice').getAttribute("src");
+    //yourChoiceBoxRef = document.getElementById('your-choice-image').getAttribute("src");
     yourChoice = () => {
         let yourChoiceImage = document.createElement("img");
         if (yourChoiceImage === 'rock' || yourChoiceImage === 'paper' || yourChoiceImage === 'scissors') {
             return yourChoiceImage;
         }
-        yourChoiceImageRef.appendChild(yourChoiceImage);
     };
 
     //Computer choice image references
-    computerChoiceImageRef = document.getElementById('computer-choice').getAttribute("src");
+    //computerChoiceBoxRef = document.getElementById('computer-choice-image').getAttribute("src");
     computerChoice = () => {
-        computerChoiceImage = (computerChoiceImage === 'rock' || computerChoiceImage === 'paper' || computerChoiceImage === 'scissors');
-        const randomNumber = Math.floor(Math.random() * 3); // random number between 0 and 2
-        switch (randomNumber) {
+        computerChoiceImage = randomNumber;
+        const randomNumber = Math.floor(Math.random() * 3);
+        switch (computerChoice) {
             case 0:
-                return 'rock';
-            case 1:
-                return 'paper';
+                console.log("0");
+                break;
             case 2:
-                return 'scissors';
+                console.log("1");
+                break;
+            case 2:
+                console.log("2");
+                break;
         }
-    };
-    // Add function which determines the winner
+        if (computerChoice === "0") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/rock.jpg';
+        } else if (computerChoice === "1") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/paper.jpg';
+        } else if (computerChoice === "2") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/scissors.jpg';
+        };
 
-    determineWinner = (yourChoice, computerChoice) => {
+        
+
+
+
+
+        /*computerChoice = this.getAttribute("data-type");
+        if (computerChoice === "0") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/rock.jpg';
+        }
+        if (computerChoice === "1") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/paper.jpg';
+        }
+        if (computerChoice === "2") {
+            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
+            computerChoiceBoxRef.src = 'assets/images/scissors.jpg';
+        }
+        */
+    };
+
+
+    // Add function which determines the winner
+    /* determineWinner = (yourChoice, computerChoice) => {
         if (yourChoice === computerChoice) {
             return 'The game is a tie';
         }
@@ -93,8 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
-    console.log(yourChoice);
+
+    /*console.log(yourChoice);
     console.log(computerChoice);
-    console.log(determinewinner(yourChoice, computerChoice));
+    console.log(determineWinner(yourChoice, computerChoice));
     runGame();
+    */
 });
