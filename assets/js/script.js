@@ -97,3 +97,4 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(computerChoice);
     console.log(determinewinner(yourChoice, computerChoice));
     runGame();
+});
