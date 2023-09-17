@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             console.log('button', button);
             yourChoice = this.getAttribute("data-type");
+            runGame(yourChoice);
             if (yourChoice === "0") {
-                console.log('Worked');
                 console.log('yourChoiceBoxRef', yourChoiceBoxRef.src);
                 yourChoiceBoxRef.src = 'assets/images/rock.jpg';
             } else if (yourChoice === "1") {
@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     break;
             }
              */
-
         });
     }
+
     //Your choice image references
     //yourChoiceBoxRef = document.getElementById('your-choice-image').getAttribute("src");
     yourChoice = () => {
@@ -52,17 +52,18 @@ document.addEventListener("DOMContentLoaded", function () {
     //Computer choice image references
     //computerChoiceBoxRef = document.getElementById('computer-choice-image').getAttribute("src");
     computerChoice = () => {
-        computerChoiceImage = randomNumber;
-        const randomNumber = Math.floor(Math.random() * 3);
-        switch (computerChoice) {
+        computerChoice = this.getAttribute("data-type");
+        let randomNumber = ["rock", "paper", "scissors"];
+        randomNumber = Math.floor(Math.random() * 3);
+        switch (randomNumber) {
             case 0:
-                console.log("0");
+                console.log(computerChoice);
+                break;
+            case 1:
+                console.log(computerChoice);
                 break;
             case 2:
-                console.log("1");
-                break;
-            case 2:
-                console.log("2");
+                console.log(computerChoice);
                 break;
         }
         if (computerChoice === "0") {
@@ -74,32 +75,13 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (computerChoice === "2") {
             console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
             computerChoiceBoxRef.src = 'assets/images/scissors.jpg';
-        };
-
-        
-
-
-
-
-        /*computerChoice = this.getAttribute("data-type");
-        if (computerChoice === "0") {
-            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
-            computerChoiceBoxRef.src = 'assets/images/rock.jpg';
         }
-        if (computerChoice === "1") {
-            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
-            computerChoiceBoxRef.src = 'assets/images/paper.jpg';
-        }
-        if (computerChoice === "2") {
-            console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
-            computerChoiceBoxRef.src = 'assets/images/scissors.jpg';
-        }
-        */
     };
-
+    console.log(computerChoice);
+    console.log("Work!!!");
 
     // Add function which determines the winner
-    /* determineWinner = (yourChoice, computerChoice) => {
+    const determineWinner = (yourChoice, computerChoice) => {
         if (yourChoice === computerChoice) {
             return 'The game is a tie';
         }
@@ -125,9 +107,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     };
-
+    console.log(determineWinner);
+    console.log("Super works!!!");
     //Add function which adds points to score area
-    addYourPoints = document.getElementById('your-points');
+
+    /*addYourPoints = document.getElementById('your-points');
     addComputerPoints = document.getElementById('computer-points');
     addPoints = () => {
         if (youWon) {
@@ -136,11 +120,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return computerPoints;
         }
     };
+}); 
+*/
 
+    //Run game function
 
-    /*console.log(yourChoice);
-    console.log(computerChoice);
-    console.log(determineWinner(yourChoice, computerChoice));
-    runGame();
-    */
+    const runGame = (yourChoice) => {
+        console.log(yourChoice);
+        console.log(computerChoice);
+        //console.log(determineWinner(yourChoice, computerChoice));
+    };
 });
