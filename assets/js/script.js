@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             console.log('button', button);
             yourChoice = this.getAttribute("data-type");
-            runGame(yourChoice);
             if (yourChoice === "0") {
                 console.log('yourChoiceBoxRef', yourChoiceBoxRef.src);
                 yourChoiceBoxRef.src = 'assets/images/rock.jpg';
@@ -52,9 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
     //Computer choice image references
     //computerChoiceBoxRef = document.getElementById('computer-choice-image').getAttribute("src");
     computerChoice = () => {
-        computerChoice = this.getAttribute("data-type");
-        let randomNumber = ["rock", "paper", "scissors"];
-        randomNumber = Math.floor(Math.random() * 3);
+        computerChoiceImage = Math.floor(Math.random() * 3);
+        let randomNumber = ["0", "1", "2"];
         switch (randomNumber) {
             case 0:
                 console.log(computerChoice);
@@ -76,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('computerChoiceBoxRef', computerChoiceBoxRef.src);
             computerChoiceBoxRef.src = 'assets/images/scissors.jpg';
         }
-    };
+    
     console.log(computerChoice);
     console.log("Work!!!");
 
@@ -109,25 +107,28 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     console.log(determineWinner);
     console.log("Super works!!!");
-    //Add function which adds points to score area
+    
+    //Add function which increase points to score area
 
-    /*addYourPoints = document.getElementById('your-points');
-    addComputerPoints = document.getElementById('computer-points');
-    addPoints = () => {
-        if (youWon) {
-            return yourPoints;
+    addYourPoints = parseInt(document.getElementById('your-points').innerText);
+    addComputerPoints = parseInt(document.getElementById('computer-points').innerText);
+    increasePoints = () => {
+        if (yourChoice != computerChoice) {
+        increment(yourPoints);
         } else {
-            return computerPoints;
+        increment(computerPoints);
         }
     };
-}); 
-*/
+};
+});
 
     //Run game function
 
     const runGame = (yourChoice) => {
+        if (yourChoice === 'rock' || yourChoice === 'paper' || yourChoice === 'scissors') {
+            console.log(runGame);
+        }
         console.log(yourChoice);
         console.log(computerChoice);
-        //console.log(determineWinner(yourChoice, computerChoice));
+        console.log(determineWinner(yourChoice, computerChoice));
     };
-});
