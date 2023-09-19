@@ -1,5 +1,6 @@
 body {
-    background: rgb(243, 116, 159);
+    background-image: url(../images/pink1.jpg);
+    background-color: rgb(243, 116, 159);
 }
 
 #heading {
@@ -7,6 +8,9 @@ body {
     text-align: center;
     font-weight: 900;
     margin-bottom: 5%;
+    font-style: italic;
+    color: rgb(12, 11, 11);
+
 }
 
 button>img:hover {
@@ -17,13 +21,19 @@ button>img:hover {
     text-align: center;
     font-size: x-large;
     font-weight: 700;
-    color: rgb(163, 23, 145);
+    color: rgb(13, 189, 71);
 }
+
+#instruction>span {
+    font-size: large;
+    font-weight: 600;
+    color: rgb(13, 189, 71);
+}
+
 
 #instruction:hover {
     transform: scale(1.1);
 }
-
 
 #game-area {
     text-align: center;
@@ -71,13 +81,15 @@ button>img:hover {
 
     #game-area {
         text-align: center;
+        clear: both;
     }
 
     #answers {
-        margin-left: 0;
+        clear: left;
     }
 
-    #answers img {
-        width: 100%;
+    #answers>p>span>img {
+        text-align: center;
+        clear: left;
     }
 }
