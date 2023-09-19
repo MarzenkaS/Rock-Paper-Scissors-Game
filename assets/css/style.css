@@ -87,9 +87,14 @@ button>img:hover {
 
 @media screen and (max-width: 450px) {
 
+    #main {
+        height: 400px;
+    }
+
     #game-area {
         text-align: center;
         clear: both;
+        margin-top: 25%;
     }
 
     #answers {
@@ -98,7 +103,11 @@ button>img:hover {
 
     #answers>p>span>img {
         text-align: center;
-        clear: left;
-        max-width: 300px;
+        max-width: 120px;
+    }
+
+    .scores {
+        display: inline;
+        padding: 10px;
     }
 }
