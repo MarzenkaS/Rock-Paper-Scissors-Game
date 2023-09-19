@@ -3,6 +3,13 @@ body {
     background-color: rgb(243, 116, 159);
 }
 
+#main {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 300px;
+}
+
 #heading {
     text-decoration: underline;
     text-align: center;
@@ -21,13 +28,13 @@ button>img:hover {
     text-align: center;
     font-size: x-large;
     font-weight: 700;
-    color: rgb(13, 189, 71);
+    color: rgb(243, 40, 125);
 }
 
 #instruction>span {
     font-size: large;
     font-weight: 600;
-    color: rgb(13, 189, 71);
+    color: rgb(12, 11, 12);
 }
 
 
@@ -72,7 +79,8 @@ button>img:hover {
 .scores {
     display: inline;
     padding: 30px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: large;
 }
 
 /* media queries */
@@ -91,5 +99,6 @@ button>img:hover {
     #answers>p>span>img {
         text-align: center;
         clear: left;
+        max-width: 300px;
     }
 }

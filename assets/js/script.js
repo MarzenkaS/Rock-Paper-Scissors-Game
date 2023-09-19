@@ -1,16 +1,21 @@
+// General reference to DOM elements. Getting the button elements and points reference.
 const choiceBtnRef = document.getElementsByClassName("choices-btn");
 const yourChoiceBoxRef = document.getElementById("your-choice-image");
 const computerChoiceBoxRef = document.getElementById("computer-choice-image");
+const yourPointsRef = document.getElementById('your-points');
+const computerPointsRef = document.getElementById('computer-points');
 
+/* This function is called when the DOM is loaded. 
+*  Variable choices has 3 values.
+*/
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Mapping for choice values to images
-    const choiceImageMap = {
-        "0": 'assets/images/rock.jpg',
-        "1": 'assets/images/paper.jpg',
-        "2": 'assets/images/scissors.jpg'
-    };
+    const choices = ["rock", "paper", "scissors"];
 
+    /* Input player and computer choice output string. 
+    *  Variable winMap shows which value beats which.
+    *  Function compares two answers from player and computer and gives the answer in return.
+    */
     const determineWinner = (yourChoice, computerChoice) => {
         if (yourChoice === computerChoice) return 'The game is a tie';
 
@@ -19,13 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
             'paper': 'scissors',
             'scissors': 'rock'
         };
-
         return (winMap[yourChoice] === computerChoice) ? 'The computer won!' : 'Congratulations you won!';
     };
 
+    // Function increases points for player if wins or otherwise for the computer.
+
     const increasePoints = (winner) => {
-        const yourPointsRef = document.getElementById('your-points');
-        const computerPointsRef = document.getElementById('computer-points');
         if (winner === "player") {
             yourPointsRef.innerText = parseInt(yourPointsRef.innerText) + 1;
         } else if (winner === "computer") {
@@ -33,25 +37,37 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    /* Loops going through each button. 
+    *  Adds event listener.
+    */
     for (let button of choiceBtnRef) {
         button.addEventListener("click", function () {
+
+            // Accessing player choice by data-type and computer choice by random method to get random choice.
             const yourChoiceValue = this.getAttribute("data-type");
             const computerChoiceValue = Math.floor(Math.random() * 3).toString();
 
-            yourChoiceBoxRef.src = choiceImageMap[yourChoiceValue];
-            computerChoiceBoxRef.src = choiceImageMap[computerChoiceValue];
+            // Updates image src. 
+            yourChoiceBoxRef.src = `assets/images/${choices[yourChoiceValue]}.jpg`;
+            computerChoiceBoxRef.src = `assets/images/${choices[computerChoiceValue]}.jpg`;
 
-            const yourChoice = Object.keys(choiceImageMap).find(key => choiceImageMap[key] === yourChoiceBoxRef.src).split('/')[2].split('.')[0];
-            const computerChoice = Object.keys(choiceImageMap).find(key => choiceImageMap[key] === computerChoiceBoxRef.src).split('/')[2].split('.')[0];
+            // Stores player and computer choice as string.
+            const yourChoice = choices[yourChoiceValue];
+            const computerChoice = choices[computerChoiceValue];
 
+            /* Triggers determineWinner function and stores result as string.
+            *  String informs who is a winner.
+            */
             const winnerMessage = determineWinner(yourChoice, computerChoice);
             console.log(winnerMessage);
 
             if (winnerMessage === 'The game is a tie') {
-                // Do nothing if it's a tie.
+                document.getElementById("text").innerText = "No one won :)";
             } else if (winnerMessage === 'Congratulations you won!') {
+                document.getElementById("text").innerText = "Congratulations you won!";
                 increasePoints("player");
             } else {
+                document.getElementById("text").innerText = "Sorry, computer won this time!";
                 increasePoints("computer");
             }
         });
