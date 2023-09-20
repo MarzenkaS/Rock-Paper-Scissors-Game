@@ -1,84 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- font awesome and google fonts-->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit&family=Lato:wght@300&family=Raleway:wght@300&family=Ubuntu&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://www.flaticon.com/free-icons/rock-paper-scissors"
-      title="rock paper scissors icons"
-    />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lato:wght@300&family=Raleway:wght@300&family=Ubuntu&display=swap" rel="stylesheet">
+     
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Rock Paper Scissors Game</title>
   </head>
   <body>
+
+    <!-- Main content with name of game and rules for game. -->
     <div id="main">
       <header>
         <h1 id="heading">
-          Rock, Paper, Scissors Game
-          <img id="logo" src="assets/images/logo.png" alt="three-hands" />
-        </h1>
+          Rock, Paper, Scissors Game <i class="fa-solid fa-hand-scissors" style="color: #f3287d;"></i>
       </header>
       <p id="instruction">
-        For having some fun please click one of the 3 images below!<br />
-        <span
-          ><bold>Rules:</bold><br />
-          1. Rock wins over scissors but loses to paper.<br />
-          2. Paper wins over rock but loses to scissors.<br />
-          3. Scissors wins over paper but loses to rock.</span
-        >
+        For having some fun please click one of the 3 images below!<br>
+        <span>
+            Rules:<br>
+            1. Rock wins over scissors but loses to paper.<br>
+            2. Paper wins over rock but loses to scissors.<br>
+            3. Scissors wins over paper but loses to rock.
+        </span>
       </p>
     </div>
 
+    <!-- Game area where player can see and chose one option by clicking on image -->
     <div id="game-area">
       <button id="rock" class="choices-btn" aria-label="rock" data-type="0">
-        <img src="assets/images/rock.jpg" alt="rock" />
+        <img class="image-size" src="assets/images/rock.jpg" alt="rock">
       </button>
       <button id="paper" class="choices-btn" aria-label="paper" data-type="1">
-        <img src="assets/images/paper.jpg" alt="paper" />
+        <img class="image-size" src="assets/images/paper.jpg" alt="paper">
       </button>
-      <button
-        id="scissors"
-        class="choices-btn"
-        aria-label="scissors"
-        data-type="2"
-      >
-        <img src="assets/images/scissors.jpg" alt="scissors" />
+      <button id="scissors" class="choices-btn" aria-label="scissors" data-type="2">
+       <img class="image-size" src="assets/images/scissors.jpg" alt="scissors">
       </button>
-    </div>
+    </div> 
 
+    <!-- Section where player can see his and computer choice. -->
     <div id="answers">
       <p id="your-choice">
-        <span
-          ><img
-            id="your-choice-image"
-            src="assets/images/win-lose.jpg"
-            alt="rules"
-        /></span>
+        <span>
+            <img id="your-choice-image" src="assets/images/win-lose.jpg" alt="rules">
+        </span>
       </p>
       <p id="computer-choice">
-        <span
-          ><img
-            id="computer-choice-image"
-            src="assets/images/win-lose.jpg"
-            alt="rules"
-        /></span>
+       <span>
+        <img id="computer-choice-image" src="assets/images/win-lose.jpg" alt="rules">
+       </span> 
       </p>
       <p id="text"></p>
     </div>
 
+    <!-- Section where player sees his and computer points. -->
     <div id="score-area">
       <p class="scores">Your Points <span id="your-points">0</span></p>
       <p class="scores">Computer Points <span id="computer-points">0</span></p>
     </div>
 
+    <script src="https://kit.fontawesome.com/a7555c1b9b.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
+
   </body>
 </html>

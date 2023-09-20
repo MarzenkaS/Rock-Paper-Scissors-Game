@@ -17,11 +17,20 @@ body {
     margin-bottom: 5%;
     font-style: italic;
     color: rgb(12, 11, 11);
+}
 
+.fa-hand-scissors {
+    width: 70px;
+    height: 70px;
 }
 
 button>img:hover {
     transform: scale(1.1);
+}
+
+.image-size {
+    height: 200px;
+    width: 300px;
 }
 
 #instruction {
@@ -52,6 +61,10 @@ button>img:hover {
     margin-bottom: 5%;
     text-align: center;
 }
+#computer-choice-image, #your-choice-image {
+    height: 400px;
+    width: 400px;
+} 
 
 #your-choice {
     display: inline;
