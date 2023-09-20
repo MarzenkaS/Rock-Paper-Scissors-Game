@@ -88,14 +88,25 @@ button>img:hover {
 @media screen and (max-width: 450px) {
 
     #main {
-        height: 420px;
-        padding: 5px 5px;
+        height: 350px;
+    }
+
+    #heading {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    #instruction {
+        margin-right: 5px;
+        margin-left: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     #game-area {
         text-align: center;
         clear: both;
-        margin-top: 25%;
+        margin-top: 20%;
     }
 
     #answers {
