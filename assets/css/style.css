@@ -7,7 +7,7 @@ body {
     background-color: white;
     max-width: 600px;
     margin: 0 auto;
-    height: 300px;
+    height: 330px;
 }
 
 #heading {
@@ -17,6 +17,7 @@ body {
     margin-bottom: 5%;
     font-style: italic;
     color: rgb(12, 11, 11);
+    padding-top: 10px;
 }
 
 .fa-hand-scissors {
@@ -101,7 +102,7 @@ button>img:hover {
 @media screen and (max-width: 450px) {
 
     #main {
-        height: 350px;
+        height: 430px;
     }
 
     #heading {
