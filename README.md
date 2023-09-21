@@ -58,10 +58,42 @@ This game is one of the most popular game in the world for everyone regardless o
 ### Validator testing
 
 1. _HTML W3C validator_
-2. _CSS W3C validator_
-3. _JSHint JavaScript Validator_
+
+- vh
+
+![HTML validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/html.validator.png?raw=true)
+
+
+
+1. _CSS W3C validator_
+
+- hbh
+
+![CSS validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/css.validation.png?raw=true)
+
+
+1. _JSHint JavaScript Validator_
+
+- hhjb
+
+![JavaScript validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/js.jshint.png?raw=true)
+
+
+
 
 ### Lighthouse
+
+- At beginning I had a problem with score performance to get it above 90. It was less then 80. To change that I had to add width and height for all images and compress the size of background image. That fixed a problem.
+- But with accessibility was no issue to get high score with 100 out of 100.
+
+- Lighthouse for desktop:
+
+![Desktop](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/lighthouse.desktop.png?raw=true)
+
+- Lighthouse for mobile:
+
+![Mobile](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/lighthouse.mobile.png?raw=true)
+
 
 ### Other browsers
 
@@ -73,9 +105,41 @@ This game is one of the most popular game in the world for everyone regardless o
 
 ## Deployment
 
+- The site was deployed to GitHub. 
+- In the GitHub repository I went to Settings.
+- From settings I went to pages section. 
+- From the source section drop-down menu, selected Deploy from a branch. Below I set up Main for branch and I saved it. 
+- After that the page was automatically refreshed.
 
+Here you can see live link [Comfy House](https://marzenkas.github.io/Comfy-House-New/)
 
 ## Credits
 
+Sources I was using in that project to find solution for problems or to understand the JavaScript topic better are:
+
+1- [Code Institute](https://learn.codeinstitute.net/dashboard) 
+
+2- [W3Schools](https://www.w3schools.com/)
+
+3- [Mozilla Developer](https://developer.mozilla.org/en-US/) 
+
+4- [JSHint.com](https://jshint.com/)
+
+5- Chrome DevTools in Google Chrome browser
+
+6- [Codecademy.com](https://www.codecademy.com)
+
+7- [YouTube.com](https://youtube.com)
+
 ### Content
+
+1. The idea for the appearance of the game is my own.
+2. I used font from [Google Fonts](https://fonts.google.com/)
+
 ### Media
+
+1. Background image for home page i took from [freepik.com](https://freepik.com)
+2. Images for choices and for placeholder were taken from two websites [istockphoto.com](https://www.istockphoto.com) and [pixabay.com](https://pixabay.com)
+3. Logo next to the name of the game is taken from webiste [fontawesome.com](https://fontawesome.com)
+4. I needed to compress my background image and for that I used [compress2go.com](https://compress2go.com)
+
