@@ -97,6 +97,8 @@ This game is one of the most popular game in the world for everyone regardless o
 
 ### Other browsers
 
+I tested my game in Google Chrome, Microsoft Edge and Mozilla Firefox. Works perfectly in all of those browsers.
+
 ### Different screen sizes
 
 ### Bugs
