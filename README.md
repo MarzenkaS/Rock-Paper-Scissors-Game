@@ -59,27 +59,29 @@ This game is one of the most popular game in the world for everyone regardless o
 
 1. _HTML W3C validator_
 
-- vh
+- I had a few bugs I will show and describe them in Bugs section below. After I fixed them my HTML code passed the validator.
 
 ![HTML validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/html.validator.png?raw=true)
 
-
-
 1. _CSS W3C validator_
 
-- hbh
+- No errors were found.
 
 ![CSS validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/css.validation.png?raw=true)
 
-
 1. _JSHint JavaScript Validator_
 
-- hhjb
+- I had problems which I will show and describe in Bugs section below. After fixing my JavaScript code passed the validator:
+
+1- There are 4 functions in JavaScript file.
+
+2- Function with the largest signature take 2 arguments, while the median is 0.5.
+
+3- Largest function has 14 statements in it, while the median is 4.
+
+4- The most complex function has a cyclomatic complexity value of 3 while the median is 3.
 
 ![JavaScript validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/js.jshint.png?raw=true)
-
-
-
 
 ### Lighthouse
 
@@ -94,17 +96,45 @@ This game is one of the most popular game in the world for everyone regardless o
 
 ![Mobile](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/lighthouse.mobile.png?raw=true)
 
-
-### Other browsers
+### Different browsers
 
 I tested my game in Google Chrome, Microsoft Edge and Mozilla Firefox. Works perfectly in all of those browsers.
 
 ### Different screen sizes
 
+- Screen from laptop we can see below.
+
+![Desktop screen](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/main.look.png?raw=true)
+
+- Screen from mobile of course is a different. I decided to put two placeholders inline so when a user plays a game doesn't have to scroll down after clicking an image choice to check result. Player can see at the same time choices, result, message and score.
+
+![Main screen from mobile](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/mobile1.png?raw=true) ![Choices images and result on mobile](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/mobile2.png?raw=true) ![Choices images, result and score on mobile](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/mobile3.png?raw=true)
+
 ### Bugs
 
+1- HTML code
 
+- On first image one of my link element didn't have an attribute. So to fix it I added rel attribute.
+- I used bold element as a child of span element which is not allowed. So I just deleted bold element.
 
+![problem with link and bold element](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/html.error1.png?raw=true)
+
+- I had unclosed div element. I just went to that div and at the end I added closing tag. By fixing that error also error about body element got fixed.
+
+![Problem with unclosed div element](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/html.error3.png?raw=true)
+
+- I had many trailing slashes on void elements. It was being added by the emmet template in the workspace tools provided by CI and returning everytime. I fixed it by deleting the template and writing it manually.
+
+![Problem with trailing slashes](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/html.error2.png?raw=true)
+
+2- JavaScript code
+
+- I couldn't make function 'computer choice' to work. And that caused other problems. I stuck in my code for a while and I needed some help. And thanks to tutor assistance and my mentor's guidances I was able to fix and finish my code to make my project works.
+  
+![Problem with computer choice showed in browser](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/js.error1.png?raw=true)
+
+![Problem with computer choice showed in JSHint validator](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/js.error1.jshint.png?raw=true)
+  
 ## Deployment
 
 - The site was deployed to GitHub. 
@@ -129,6 +159,8 @@ Sources I was using in that project to find solution for problems or to understa
 
 5- Chrome DevTools in Google Chrome browser
 
+6- [Stackoverflow.com](https://stackoverflow.com/)
+
 6- [Codecademy.com](https://www.codecademy.com)
 
 7- [YouTube.com](https://youtube.com)
@@ -144,4 +176,3 @@ Sources I was using in that project to find solution for problems or to understa
 2. Images for choices and for placeholder were taken from two websites [istockphoto.com](https://www.istockphoto.com) and [pixabay.com](https://pixabay.com)
 3. Logo next to the name of the game is taken from webiste [fontawesome.com](https://fontawesome.com)
 4. I needed to compress my background image and for that I used [compress2go.com](https://compress2go.com)
-
