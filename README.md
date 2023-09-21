@@ -42,10 +42,40 @@ This game is one of the most popular game in the world for everyone regardless o
    
    3- No one won :)
 
-
+![Computer won](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/first.messa.png?raw=true)
+![Player won](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/second.messa.png?raw=true)
+![No one won](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/third.messa.png?raw=true)
 
 1. _Score area_
 
+- I put the scores at the bottom of the page. 
+- Scores are updated depending on who won.
+
+![Scores](https://github.com/MarzenkaS/Rock-Paper-Scissors-Game/blob/main/docs/who.won.and.points.png?raw=true)
+
+## Testing
+
+### Validator testing
+
+1. _HTML W3C validator_
+2. _CSS W3C validator_
+3. _JSHint JavaScript Validator_
+
+### Lighthouse
+
+### Other browsers
+
+### Different screen sizes
+
+### Bugs
 
 
-![]()
+
+## Deployment
+
+
+
+## Credits
+
+### Content
+### Media
