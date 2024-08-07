@@ -143,7 +143,7 @@ I tested my game in Google Chrome, Microsoft Edge and Mozilla Firefox. Works per
 - From the source section drop-down menu, selected Deploy from a branch. Below I set up Main for branch and I saved it. 
 - After that the page was automatically refreshed.
 
-Here you can see live link [Comfy House](https://marzenkas.github.io/Comfy-House-New/)
+Here you can see live link [Rock, Paper, Scissors Game](https://8000-marzenkas-rockpaperscis-vslvbwr5z17.ws-eu115.gitpod.io/)
 
 ## Credits
 
